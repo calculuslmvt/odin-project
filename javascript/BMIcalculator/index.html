@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    body {
+        /* Set background image and properties */
+        background-image: url('https://i.pinimg.com/736x/4c/6e/74/4c6e742678fa6e8285a082b534fdd5fa.jpg');
+        background-size:contain; /* Adjust the background image size to cover the entire viewport */
+        background-position: center; /* Center the background image */
+        background-repeat:repeat; /* Do not repeat the background image */
+        height: 100vh; /* Ensure the background covers the entire viewport height */
+        margin: 0; /* Remove default body margin */
+        color:beige;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    /* Additional styles for your content can be added here */
+    .content {
+        text-align: center;
+        padding: 50px;
+        color: white;
+    }
+</style>
+
+  <meta charset="UTF-8" />
+  <title>Hello, world!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+</head>
+<body>
+  <h1>Calculate BMI!</h1>
+  <form>
+    <label for="age"> Enter Age </label>
+    <input type="text" id="age" name="age"><br><br>
+    
+    <label for="gender">Gender</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label><br><br>
+    
+    <label for="height"> Height in meter </label>
+    <input type="number" step="0.01" id="height" name="height"><br><br>
+    <label for="weight"> Weight in kg</label>
+    <input type="number" step="0.01" id="weight" name="weight"><br><br>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+  <script type="module" src="javascript/main.js"></script>
+</body>
+</html>
