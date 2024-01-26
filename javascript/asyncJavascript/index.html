@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body style="background-color: black; color: white;">
+    <!-- create a card -->
+
+    <div class="card">
+        <div class="profilePhoto">
+            profilePhoto
+        </div>
+        <div class="Profileinformation">
+            <div class="followers">
+                followers
+            </div>
+        </div>
+    </div>
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://api.github.com/users/hiteshchoudhary');
+
+    let followers = null;
+    let imageLink = null; 
+    xhr.onreadystatechange = function() {
+
+        if(xhr.readyState === 4 ) {
+            const data = JSON.parse(this.responseText);
+            imageLink = data.avatar_url;
+            followers = data.followers; 
+            const profilePhoto = document.querySelector(".profilePhoto");
+            profilePhoto.innerHTML = `<img src = "${imageLink}" width="100" height="100"> `;
+            document.querySelector('.followers').innerHTML = `Followers : ${followers}`;  
+        }
+        
+    };
+    xhr.send();
+
+
+</script>
+</body>
+</html>

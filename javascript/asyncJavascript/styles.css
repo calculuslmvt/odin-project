@@ -1,0 +1,18 @@
+.profilePhoto {
+    border: 10px burlywood;
+    background-color:brown;
+    width:auto;
+    padding: 10px;
+}
+.followers {
+    color: slategray;
+    border: 5px;
+    background-color: beige;
+    width: fit-content;
+    padding: 10px;
+}
+.card {
+    display: grid;
+    row-gap: 5px;
+    place-items: center;
+}
