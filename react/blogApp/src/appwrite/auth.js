@@ -12,9 +12,12 @@ export class AuthService {
         this.account = new Account(this.client); 
     }
 
-    async createAcccount({email, password, name}){
+    async createAccount({email, password, name}){
+
+        console.log(email);
+        
         try {
-            const userAccount = await this.account.create(ID.unique, email, password, name); 
+            const userAccount = await this.account.create(ID.unique(), email, password, name); 
 
             if(userAccount)return this.login(email, password); 
             return userAccount; 
